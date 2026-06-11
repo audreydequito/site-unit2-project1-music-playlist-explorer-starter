@@ -4,8 +4,6 @@ Submitted by: **Audrey Dequito**
 
 Estimated time spent: **20** hours spent in total
 
-Deployed Application: [Wave - Music Playlist Explorer](https://adequito.github.io/music-playlist-explorer/)
-
 ### Description
 
 Wave is a modern music playlist explorer featuring diverse playlists across K-pop, J-pop, indie, R&B, and pop genres. The app includes a sleek dark mode interface with smooth animations, an infinite-scrolling featured carousel with dynamic backgrounds extracted from album art, and AI-powered playlist descriptions using OpenRouter API.
