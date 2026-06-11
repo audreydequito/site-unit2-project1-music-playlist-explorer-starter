@@ -3,25 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Music Playlist Explorer</title>
+
+    <title>Wave</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-transition-overlay"></div>
     <header>
-        <!-- Your header content here -->
+        <div class="logo">
+            <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4C22 4 26 6 28 12C30 18 28 24 24 28C20 32 14 30 12 26C10 22 11 18 13 16C15 14 17 15 18 17C19 19 18 21 16 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 10C18 10 20 11 21 14C22 17 20 19 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h1>wave</h1>
+        </div>
+        <nav class="page-navigation">
+            <a href="featured.html" class="nav-link">Featured</a>
+            <a href="index.html" class="nav-link active">All</a>
+            <button id="add-playlist-btn" class="nav-link add-btn">+</button>
+            <button id="search-icon-btn" class="nav-link search-btn" title="Search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </nav>
+        <div class="header-search-container" id="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search playlists..."
+                class="header-search-input"
+            >
+            <button class="search-close-btn" id="search-close-btn">✕</button>
+        </div>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <div class="controls-bar">
+        <div class="welcome-message">
+            <h2 class="welcome-title">welcome, Audrey</h2>
+            <p class="welcome-subtitle">start listening</p>
+        </div>
+        <div class="sort-container">
+            <svg class="sort-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 6h18M3 12h12M3 18h6"/>
+            </svg>
+            <select id="sort-select" class="sort-select">
+                <option value="default">Default</option>
+                <option value="name-asc">Name: A → Z</option>
+                <option value="name-desc">Name: Z → A</option>
+                <option value="likes-desc">Most Liked</option>
+                <option value="likes-asc">Least Liked</option>
+            </select>
+        </div>
+    </div>
+
+    <main>
+        <div class="playlist-cards">
+            <div class="playlist-card">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/playlist.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/playlist.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/playlist.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-card">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="playlist-cover">
+                <div class="playlist-info">
+                    <div class="playlist-text">
+                        <h3 class="playlist-title">Playlist Title</h3>
+                        <p class="playlist-creator">Creator Name</p>
+                    </div>
+                    <div class="playlist-likes">
+                        <span class="heart-icon">♡</span>
+                        <span class="like-count">5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-menu-container">
+                <button class="modal-menu-btn" title="Options">⋮</button>
+                <div class="modal-menu-dropdown">
+                    <button class="modal-menu-item" id="modal-edit-btn">Edit</button>
+                    <button class="modal-menu-item" id="modal-delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="modal-header">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="modal-cover">
+                <div class="modal-info">
+                    <h2 class="modal-playlist-title">Playlist Title</h2>
+                    <p class="modal-creator">Creator Name</p>
+                    <button id="get-description-btn" class="description-button">Get Description</button>
+                    <div id="description-container" class="description-container" style="display: none;">
+                        <p id="description-text" class="description-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-list">
+                <div class="song-item">
+                    <img src="assets/placeholder-image.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-details">
+                        <p class="song-title">Song Title</p>
+                        <p class="song-artist">Artist Name</p>
+                        <p class="song-album">Album Name</p>
+                    </div>
+                    <span class="song-duration">0:00</span>
+                </div>
+
+                <div class="song-item">
+                    <img src="assets/placeholder-image.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-details">
+                        <p class="song-title">Song Title</p>
+                        <p class="song-artist">Artist Name</p>
+                        <p class="song-album">Album Name</p>
+                    </div>
+                    <span class="song-duration">0:00</span>
+                </div>
+
+                <div class="song-item">
+                    <img src="assets/placeholder-image.jpg" alt="Song Cover" class="song-cover">
+                    <div class="song-details">
+                        <p class="song-title">Song Title</p>
+                        <p class="song-artist">Artist Name</p>
+                        <p class="song-album">Album Name</p>
+                    </div>
+                    <span class="song-duration">0:00</span>
+                </div>
+            </div>
+
+            <button class="shuffle-button">Shuffle</button>
+        </div>
+    </div>
+
+    <!-- Add Playlist Form Modal -->
+    <div class="modal-overlay" id="form-modal">
+        <div class="modal-content form-modal-content">
+            <h2 id="form-modal-title">Add New Playlist</h2>
+            <form id="playlist-form">
+                <div class="form-group">
+                    <label for="playlist-title-input">Playlist Title *</label>
+                    <input type="text" id="playlist-title-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlist-creator-input">Creator Name *</label>
+                    <input type="text" id="playlist-creator-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlist-art-url-input">Cover Image URL *</label>
+                    <input type="url" id="playlist-art-url-input" required placeholder="https://example.com/image.jpg">
+                </div>
+
+                <h3>Songs</h3>
+                <div id="songs-container">
+                    <!-- Song inputs will be added here dynamically -->
+                </div>
+
+                <button type="button" id="add-song-btn" class="secondary-btn">+ Add Song</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Save Playlist</button>
+                    <button type="button" id="cancel-form-btn" class="secondary-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="delete-confirmation-modal">
+        <div class="modal-content confirmation-modal-content">
+            <h2>Delete Playlist?</h2>
+            <p class="confirmation-message">Are you sure you want to delete "<span id="delete-playlist-name"></span>"? This action cannot be undone.</p>
+            <div class="form-actions">
+                <button type="button" id="confirm-delete-btn" class="danger-btn">Delete</button>
+                <button type="button" id="cancel-delete-btn" class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <!-- Your footer content here -->
+        <p>&copy; 2026 Wave</p>
     </footer>
-    <script src="data/data.js"></script>
+    <script src="secrets.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

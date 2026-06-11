@@ -1,0 +1,665 @@
+/* ============================================
+   FEATURED PAGE SPECIFIC STYLES
+   Navigation styles inherited from style.css
+   ============================================ */
+
+/* Update header to accommodate navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide search button on featured page but maintain space */
+#search-icon-btn {
+    visibility: hidden;
+}
+
+/* Featured Welcome Message */
+.featured-welcome {
+    max-width: 1400px;
+    margin: 60px auto 20px auto;
+    padding: 0 60px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    animation: heroFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.featured-welcome-title {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.featured-welcome-subtitle {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3px;
+    padding-left: 2px;
+}
+
+/* Featured Page Main Layout */
+.featured-main {
+    padding: 0 60px 0 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Dynamic Background Gradient */
+.dynamic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.dynamic-background.active {
+    opacity: 1;
+}
+
+.dynamic-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(100px);
+}
+
+/* Ensure content stays above background */
+header,
+.featured-main,
+.carousel-section,
+.carousel-progress,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Featured Content - Contained Hero */
+.featured-content {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Cover Image - Contained Background */
+.playlist-cover-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.featured-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark gradient overlay for text readability */
+.featured-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 2;
+}
+
+/* Playlist Details - Overlaid on Image */
+.playlist-details {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.featured-playlist-title {
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.featured-creator {
+    font-size: 28px;
+    color: #e0e0e0;
+    margin: 0;
+    font-weight: 400;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   SONG CAROUSEL - Overlapping Hero
+   ============================================ */
+.carousel-section {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 60px 80px 60px;
+    max-width: 1400px;
+    margin: -80px auto 0 auto;
+    z-index: 10;
+    min-height: 450px;
+}
+
+.carousel-arrow {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 32px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 10;
+    padding: 10px;
+    align-self: center;
+    margin-top: 100px;
+}
+
+.carousel-arrow:hover {
+    color: #a0a0a0;
+    transform: scale(1.15);
+}
+
+.carousel-arrow:active {
+    transform: scale(0.9);
+}
+
+.carousel-arrow span {
+    display: block;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.song-carousel-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    align-self: stretch;
+}
+
+.song-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px 0;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Enable smooth scrolling - always on for consistent behavior */
+.song-carousel {
+    scroll-behavior: smooth;
+}
+
+.song-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Song Card in Carousel */
+.carousel-song-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                border 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(0.88);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    will-change: transform, opacity;
+}
+
+/* Featured/Center Card - Larger */
+.carousel-song-card.featured {
+    min-width: 350px;
+    max-width: 350px;
+    padding: 25px;
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+    background: #242424;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.carousel-song-card:hover {
+    background: #202020;
+    transform: scale(0.92);
+    opacity: 0.7;
+}
+
+.carousel-song-card.featured:hover {
+    transform: scale(1.02) translateZ(0);
+    opacity: 1;
+    background: #282828;
+}
+
+.carousel-song-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: #1a1a1a;
+}
+
+.carousel-song-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.carousel-song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+.carousel-song-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-song-artist {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-song-album {
+    font-size: 13px;
+    color: #707070;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-song-duration {
+    font-size: 13px;
+    color: #909090;
+    margin: 0;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .featured-welcome {
+        padding: 0 40px;
+        margin-top: 50px;
+    }
+
+    .featured-welcome-title {
+        font-size: 46px;
+    }
+
+    .featured-welcome-subtitle {
+        font-size: 24px;
+    }
+
+    .featured-main {
+        padding: 0 40px 0 40px;
+    }
+
+    .featured-content {
+        padding: 35px;
+        height: 450px;
+    }
+
+    .featured-playlist-title {
+        font-size: 56px;
+    }
+
+    .featured-creator {
+        font-size: 24px;
+    }
+
+    .carousel-section {
+        padding: 0 40px 60px 40px;
+        margin: -70px auto 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-welcome {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+
+    .featured-welcome-title {
+        font-size: 36px;
+    }
+
+    .featured-welcome-subtitle {
+        font-size: 22px;
+    }
+
+    .featured-main {
+        padding: 0 20px 0 20px;
+    }
+
+    .featured-content {
+        padding: 25px;
+        height: 350px;
+        border-radius: 10px;
+    }
+
+    .playlist-cover-container {
+        border-radius: 10px;
+        top: 20px; /* Center the cover image on mobile */
+    }
+
+    .featured-cover {
+        object-position: center; /* Center the image focal point */
+    }
+
+    .featured-playlist-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .featured-creator {
+        font-size: 18px;
+    }
+
+    .carousel-section {
+        padding: 0 20px 40px 20px;
+        margin: -50px auto 0 auto;
+        gap: 15px;
+    }
+
+    .carousel-arrow {
+        font-size: 28px;
+        padding: 8px;
+        margin-top: 80px;
+    }
+
+    .carousel-song-card {
+        min-width: 180px;
+        max-width: 180px;
+        padding: 12px;
+    }
+
+    .carousel-song-card.featured {
+        min-width: 240px;
+        max-width: 240px;
+        padding: 16px;
+    }
+
+    .carousel-song-title {
+        font-size: 16px;
+    }
+
+    .carousel-song-artist {
+        font-size: 13px;
+    }
+
+    .carousel-song-album {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .page-navigation {
+        flex: 1;
+        justify-content: flex-end;
+        min-width: 0;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-welcome {
+        padding: 0 15px;
+        margin-top: 30px;
+    }
+
+    .featured-welcome-title {
+        font-size: 32px;
+    }
+
+    .featured-welcome-subtitle {
+        font-size: 20px;
+    }
+
+    .featured-main {
+        padding: 0 15px 0 15px;
+    }
+
+    .featured-content {
+        padding: 20px;
+        height: 300px;
+        border-radius: 8px;
+    }
+
+    .playlist-cover-container {
+        border-radius: 8px;
+        top: 30px; /* Center the cover image more on smaller mobile */
+    }
+
+    .featured-cover {
+        object-position: center;
+    }
+
+    .featured-playlist-title {
+        font-size: 28px;
+    }
+
+    .featured-creator {
+        font-size: 16px;
+    }
+
+    .carousel-section {
+        padding: 0 15px 30px 15px;
+        margin: -40px auto 0 auto;
+        gap: 10px;
+    }
+
+    .carousel-arrow {
+        font-size: 24px;
+        padding: 6px;
+        margin-top: 60px;
+    }
+
+    .carousel-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-song-card {
+        min-width: 140px;
+        max-width: 140px;
+        padding: 10px;
+    }
+
+    .carousel-song-card.featured {
+        min-width: 200px;
+        max-width: 200px;
+        padding: 14px;
+    }
+
+    .carousel-song-title {
+        font-size: 15px;
+    }
+
+    .carousel-song-artist {
+        font-size: 12px;
+    }
+
+    .carousel-song-album {
+        font-size: 11px;
+    }
+
+    .carousel-song-duration {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    header {
+        padding: 12px 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .page-navigation {
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        padding: 6px;
+    }
+}
+
+/* ============================================
+   PROGRESS INDICATORS
+   ============================================ */
+.carousel-progress {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-dot:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.2);
+}
+
+.progress-dot.active {
+    background: rgba(255, 255, 255, 0.8);
+    width: 24px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .carousel-progress {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    .progress-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .progress-dot.active {
+        width: 18px;
+    }
+}

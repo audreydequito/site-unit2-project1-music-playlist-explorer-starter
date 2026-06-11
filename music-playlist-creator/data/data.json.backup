@@ -1,0 +1,588 @@
+{
+  "playlists": [
+    {
+      "playlistID": 1,
+      "playlistTitle": "Chill Vibes",
+      "playlistArtURL": "https://images.unsplash.com/photo-1614149162883-504ce9a5c10f?w=500&h=500&fit=crop",
+      "playlistCreator": "Alex Chen",
+      "likeCount": 1247,
+      "songs": [
+        {
+          "songID": 101,
+          "songTitle": "Sunset Dreams",
+          "songArtist": "Luna Wave",
+          "songAlbum": "Coastal Nights",
+          "songArtURL": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop",
+          "songDuration": "3:42"
+        },
+        {
+          "songID": 102,
+          "songTitle": "Ocean Breeze",
+          "songArtist": "The Tides",
+          "songAlbum": "Summer Collection",
+          "songArtURL": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+          "songDuration": "4:15"
+        },
+        {
+          "songID": 103,
+          "songTitle": "Lazy Afternoon",
+          "songArtist": "Mellow Mood",
+          "songAlbum": "Relaxation Station",
+          "songArtURL": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
+          "songDuration": "3:58"
+        },
+        {
+          "songID": 104,
+          "songTitle": "Island Breeze",
+          "songArtist": "Tropical Vibes",
+          "songAlbum": "Paradise Found",
+          "songArtURL": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop",
+          "songDuration": "4:22"
+        },
+        {
+          "songID": 105,
+          "songTitle": "Moonlight Serenade",
+          "songArtist": "Night Owl",
+          "songAlbum": "Evening Mood",
+          "songArtURL": "https://images.unsplash.com/photo-1458560871784-56d23406c091?w=300&h=300&fit=crop",
+          "songDuration": "3:33"
+        },
+        {
+          "songID": 106,
+          "songTitle": "Peaceful Mind",
+          "songArtist": "Zen Masters",
+          "songAlbum": "Inner Calm",
+          "songArtURL": "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop",
+          "songDuration": "5:12"
+        },
+        {
+          "songID": 107,
+          "songTitle": "Gentle Rain",
+          "songArtist": "Nature Sounds",
+          "songAlbum": "Weather Moods",
+          "songArtURL": "https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?w=300&h=300&fit=crop",
+          "songDuration": "4:45"
+        },
+        {
+          "songID": 108,
+          "songTitle": "Floating Away",
+          "songArtist": "Cloud Nine",
+          "songAlbum": "Dreamscapes",
+          "songArtURL": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
+          "songDuration": "3:27"
+        }
+      ]
+    },
+    {
+      "playlistID": 2,
+      "playlistTitle": "Workout Hits",
+      "playlistArtURL": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=500&fit=crop",
+      "playlistCreator": "Marcus Johnson",
+      "likeCount": 2891,
+      "songs": [
+        {
+          "songID": 201,
+          "songTitle": "Thunder Strike",
+          "songArtist": "Power Beats",
+          "songAlbum": "High Energy",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:22"
+        },
+        {
+          "songID": 202,
+          "songTitle": "Push Forward",
+          "songArtist": "Motivation Kings",
+          "songAlbum": "Never Give Up",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:01"
+        },
+        {
+          "songID": 203,
+          "songTitle": "Beat Drop",
+          "songArtist": "DJ Pulse",
+          "songAlbum": "Gym Anthems",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:47"
+        },
+        {
+          "songID": 204,
+          "songTitle": "Adrenaline Rush",
+          "songArtist": "Cardio Kings",
+          "songAlbum": "Peak Performance",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:15"
+        },
+        {
+          "songID": 205,
+          "songTitle": "No Limits",
+          "songArtist": "Iron Will",
+          "songAlbum": "Beast Mode",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:08"
+        },
+        {
+          "songID": 206,
+          "songTitle": "Power Up",
+          "songArtist": "Energy Boost",
+          "songAlbum": "Maximum Drive",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:54"
+        },
+        {
+          "songID": 207,
+          "songTitle": "Run Faster",
+          "songArtist": "Sprint Squad",
+          "songAlbum": "Speed Training",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:38"
+        },
+        {
+          "songID": 208,
+          "songTitle": "Champion Mindset",
+          "songArtist": "Victory Lane",
+          "songAlbum": "Winners Circle",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:21"
+        }
+      ]
+    },
+    {
+      "playlistID": 3,
+      "playlistTitle": "Late Night Jazz",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "Sofia Martinez",
+      "likeCount": 856,
+      "songs": [
+        {
+          "songID": 301,
+          "songTitle": "Midnight in Manhattan",
+          "songArtist": "The Jazz Collective",
+          "songAlbum": "Urban Stories",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "5:23"
+        },
+        {
+          "songID": 302,
+          "songTitle": "Smooth Sax",
+          "songArtist": "Kenny Rivers",
+          "songAlbum": "Soul Sessions",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:38"
+        },
+        {
+          "songID": 303,
+          "songTitle": "Blue Notes",
+          "songArtist": "The Trio",
+          "songAlbum": "Classic Jazz",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "6:12"
+        },
+        {
+          "songID": 304,
+          "songTitle": "Piano in the Dark",
+          "songArtist": "Marcus Cole",
+          "songAlbum": "Late Night Sessions",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "5:47"
+        },
+        {
+          "songID": 305,
+          "songTitle": "Velvet Voice",
+          "songArtist": "Nina Storm",
+          "songAlbum": "Soulful Nights",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:56"
+        },
+        {
+          "songID": 306,
+          "songTitle": "City Lights",
+          "songArtist": "Urban Jazz Band",
+          "songAlbum": "Metropolitan Moods",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "5:18"
+        },
+        {
+          "songID": 307,
+          "songTitle": "Trumpet Twilight",
+          "songArtist": "Miles Apart",
+          "songAlbum": "Brass Dreams",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "6:03"
+        },
+        {
+          "songID": 308,
+          "songTitle": "Swing Time",
+          "songArtist": "The Big Band",
+          "songAlbum": "Golden Age Jazz",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:42"
+        }
+      ]
+    },
+    {
+      "playlistID": 4,
+      "playlistTitle": "Road Trip Mix",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "Jordan Lee",
+      "likeCount": 3421,
+      "songs": [
+        {
+          "songID": 401,
+          "songTitle": "Highway Dreams",
+          "songArtist": "The Wanderers",
+          "songAlbum": "Open Roads",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:55"
+        },
+        {
+          "songID": 402,
+          "songTitle": "Desert Sun",
+          "songArtist": "Wild Hearts",
+          "songAlbum": "Journey West",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:29"
+        },
+        {
+          "songID": 403,
+          "songTitle": "Freedom Ride",
+          "songArtist": "The Rebels",
+          "songAlbum": "Escape Plan",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:44"
+        },
+        {
+          "songID": 404,
+          "songTitle": "Endless Highway",
+          "songArtist": "Road Warriors",
+          "songAlbum": "Miles to Go",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:12"
+        },
+        {
+          "songID": 405,
+          "songTitle": "Windows Down",
+          "songArtist": "Summer Cruise",
+          "songAlbum": "Good Vibes Only",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:28"
+        },
+        {
+          "songID": 406,
+          "songTitle": "Mountain Pass",
+          "songArtist": "Scenic Route",
+          "songAlbum": "Adventure Awaits",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:36"
+        },
+        {
+          "songID": 407,
+          "songTitle": "Sunset Boulevard",
+          "songArtist": "Coastal Drive",
+          "songAlbum": "Ocean Views",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:51"
+        },
+        {
+          "songID": 408,
+          "songTitle": "Radio On",
+          "songArtist": "Highway Jams",
+          "songAlbum": "Classic Road Trips",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:04"
+        }
+      ]
+    },
+    {
+      "playlistID": 5,
+      "playlistTitle": "Study Focus",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "Emma Wilson",
+      "likeCount": 1923,
+      "songs": [
+        {
+          "songID": 501,
+          "songTitle": "Deep Concentration",
+          "songArtist": "Focus Flow",
+          "songAlbum": "Productivity Sounds",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "8:15"
+        },
+        {
+          "songID": 502,
+          "songTitle": "Ambient Study",
+          "songArtist": "White Noise Collective",
+          "songAlbum": "Learning Zone",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "7:42"
+        },
+        {
+          "songID": 503,
+          "songTitle": "Brain Waves",
+          "songArtist": "Study Beats",
+          "songAlbum": "Mind Focus",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "9:03"
+        },
+        {
+          "songID": 504,
+          "songTitle": "Library Silence",
+          "songArtist": "Quiet Hours",
+          "songAlbum": "Study Sessions",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "10:15"
+        },
+        {
+          "songID": 505,
+          "songTitle": "Flow State",
+          "songArtist": "Concentration Zone",
+          "songAlbum": "Deep Work",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "8:52"
+        },
+        {
+          "songID": 506,
+          "songTitle": "Memory Palace",
+          "songArtist": "Neural Networks",
+          "songAlbum": "Cognitive Boost",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "7:28"
+        },
+        {
+          "songID": 507,
+          "songTitle": "Study Groove",
+          "songArtist": "LoFi Academia",
+          "songAlbum": "Cram Sessions",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "6:33"
+        },
+        {
+          "songID": 508,
+          "songTitle": "Focus Point",
+          "songArtist": "Mind Palace",
+          "songAlbum": "Attention Span",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "9:47"
+        }
+      ]
+    },
+    {
+      "playlistID": 6,
+      "playlistTitle": "Party Starters",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "DJ Nova",
+      "likeCount": 4562,
+      "songs": [
+        {
+          "songID": 601,
+          "songTitle": "Dance All Night",
+          "songArtist": "The Party People",
+          "songAlbum": "Club Hits 2024",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:18"
+        },
+        {
+          "songID": 602,
+          "songTitle": "Electric Dreams",
+          "songArtist": "Neon Lights",
+          "songAlbum": "Festival Season",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:05"
+        },
+        {
+          "songID": 603,
+          "songTitle": "Bass Drop",
+          "songArtist": "DJ Hype",
+          "songAlbum": "Turn Up Volume",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:33"
+        },
+        {
+          "songID": 604,
+          "songTitle": "Party Animal",
+          "songArtist": "Wild Crowd",
+          "songAlbum": "Weekend Anthems",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:42"
+        },
+        {
+          "songID": 605,
+          "songTitle": "Let's Go Crazy",
+          "songArtist": "Hype Machine",
+          "songAlbum": "Party Central",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:11"
+        },
+        {
+          "songID": 606,
+          "songTitle": "Midnight Rave",
+          "songArtist": "Neon Pulse",
+          "songAlbum": "Club Classics",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:56"
+        },
+        {
+          "songID": 607,
+          "songTitle": "Hands Up High",
+          "songArtist": "DJ Turbo",
+          "songAlbum": "Festival Fever",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:25"
+        },
+        {
+          "songID": 608,
+          "songTitle": "Energy Explosion",
+          "songArtist": "Beat Master",
+          "songAlbum": "Party Mode",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:08"
+        }
+      ]
+    },
+    {
+      "playlistID": 7,
+      "playlistTitle": "Acoustic Coffee",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "Olivia Brown",
+      "likeCount": 712,
+      "songs": [
+        {
+          "songID": 701,
+          "songTitle": "Morning Light",
+          "songArtist": "James Taylor Jr.",
+          "songAlbum": "Unplugged Sessions",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:56"
+        },
+        {
+          "songID": 702,
+          "songTitle": "Coffee Shop Serenade",
+          "songArtist": "Sarah McKenzie",
+          "songAlbum": "Intimate Moments",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:21"
+        },
+        {
+          "songID": 703,
+          "songTitle": "Rainy Day",
+          "songArtist": "The Folk Singers",
+          "songAlbum": "Simple Life",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:49"
+        },
+        {
+          "songID": 704,
+          "songTitle": "Wooden Guitar",
+          "songArtist": "String Theory",
+          "songAlbum": "Acoustic Soul",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:13"
+        },
+        {
+          "songID": 705,
+          "songTitle": "Warm Cup",
+          "songArtist": "Cozy Corner",
+          "songAlbum": "Cafe Vibes",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:37"
+        },
+        {
+          "songID": 706,
+          "songTitle": "Sunday Morning",
+          "songArtist": "Easy Living",
+          "songAlbum": "Weekend Relax",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:28"
+        },
+        {
+          "songID": 707,
+          "songTitle": "Fireside Stories",
+          "songArtist": "The Storytellers",
+          "songAlbum": "Tales & Tunes",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:52"
+        },
+        {
+          "songID": 708,
+          "songTitle": "Gentle Strum",
+          "songArtist": "Peaceful Players",
+          "songAlbum": "Strings Attached",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:06"
+        }
+      ]
+    },
+    {
+      "playlistID": 8,
+      "playlistTitle": "90s Throwback",
+      "playlistArtURL": "assets/img/playlist.png",
+      "playlistCreator": "Ryan Davis",
+      "likeCount": 5284,
+      "songs": [
+        {
+          "songID": 801,
+          "songTitle": "Nostalgia Nights",
+          "songArtist": "Retro Wave",
+          "songAlbum": "Decade Rewind",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:52"
+        },
+        {
+          "songID": 802,
+          "songTitle": "Teen Spirit",
+          "songArtist": "Generation X",
+          "songAlbum": "Classic 90s",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:17"
+        },
+        {
+          "songID": 803,
+          "songTitle": "Saturday Night Jam",
+          "songArtist": "The Time Machine",
+          "songAlbum": "Golden Era",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:41"
+        },
+        {
+          "songID": 804,
+          "songTitle": "Grunge Anthem",
+          "songArtist": "Seattle Sound",
+          "songAlbum": "Alt Rock Legends",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:05"
+        },
+        {
+          "songID": 805,
+          "songTitle": "Hip Hop Classic",
+          "songArtist": "Old School Crew",
+          "songAlbum": "Rap Essentials",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:48"
+        },
+        {
+          "songID": 806,
+          "songTitle": "Pop Princess",
+          "songArtist": "90s Icon",
+          "songAlbum": "Chart Toppers",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:34"
+        },
+        {
+          "songID": 807,
+          "songTitle": "Boy Band Ballad",
+          "songArtist": "Harmony Five",
+          "songAlbum": "Teen Dreams",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "4:22"
+        },
+        {
+          "songID": 808,
+          "songTitle": "Dance Floor Filler",
+          "songArtist": "90s Dance Party",
+          "songAlbum": "Club Memories",
+          "songArtURL": "assets/img/song.png",
+          "songDuration": "3:57"
+        }
+      ]
+    }
+  ]
+}

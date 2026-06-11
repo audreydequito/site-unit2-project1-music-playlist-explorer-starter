@@ -323,8 +323,488 @@ What does the shuffle button do?
 - `featured.js` - JavaScript for random selection and carousel (or extend existing script.js)
 - Both pages will share `data/data.json` for playlist data
 
-### AI Feature Spec (Milestone 8)
-[Leave blank — fill in before Milestone 8]
+### Playlist Management Features (Milestone 8)
+
+#### Overview
+Allow users to create, edit, and delete playlists directly from the application interface without manually editing JSON files.
+
+#### Feature Requirements
+
+**1. Add New Playlists**
+- Users can create new playlists from the homepage
+- Form allows input of:
+  - Playlist name
+  - Author/Creator name
+  - Playlist cover image URL
+  - Multiple songs with details (title, artist, album, cover URL, duration)
+- New playlists appear immediately on homepage
+
+**2. Edit Existing Playlists**
+- Users can modify details of existing playlists
+- Edit button on each playlist card opens pre-populated form
+- Can update: name, author, cover image, and all song details
+- Changes reflect immediately on homepage
+
+**3. Delete Playlists**
+- Users can remove playlists from homepage
+- Delete button on each playlist card
+- Confirmation prompt before deletion
+- Playlist removed from display and data model
+
+#### Function Specs
+
+##### `openAddPlaylistForm()`
+**What does this function take in?**
+- No parameters
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Opens a modal/form for creating a new playlist
+
+**What does it do?**
+- Displays empty form with fields for playlist details
+- Provides "Add Song" button to add multiple songs
+- Form includes: name, author, cover URL, songs array
+
+##### `addPlaylist(playlistData)`
+**What does this function take in?**
+- `playlistData` (object) - New playlist object with all details
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Adds playlist to `playlistsData` array
+- Re-renders playlist cards to show new playlist
+
+**What does it do?**
+- Validates input data
+- Generates new unique `playlistID`
+- Adds playlist to global data array
+- Calls `renderPlaylistCards()` to update UI
+- Closes the form modal
+
+##### `openEditForm(playlistID)`
+**What does this function take in?**
+- `playlistID` (number) - ID of playlist to edit
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Opens modal/form pre-populated with existing playlist data
+
+**What does it do?**
+- Sets `editingPlaylistId` global variable to track edit mode
+- Finds playlist by ID in `playlistsData` array
+- Updates modal title to "Edit Playlist"
+- Populates form fields with current values:
+  - Playlist title input
+  - Creator name input
+  - Cover image URL input
+- Clears song container and adds song form items for each existing song
+- Shows the form modal with all data pre-filled
+
+##### `handleFormSubmit(e)` - Updated for Edit Mode
+**What does this function take in?**
+- `e` (Event) - Form submission event
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Either adds new playlist OR updates existing playlist based on `editingPlaylistId` state
+
+**What does it do - EDIT MODE (when `editingPlaylistId` is not null):**
+- Finds the existing playlist by ID
+- Updates playlist fields:
+  - `playlistTitle` - new title from form
+  - `playlistCreator` - new creator from form
+  - `playlistArtURL` - new cover URL from form
+  - `songs` - array of updated songs (preserves songIDs where possible)
+- Clears cached AI description for the edited playlist
+- Preserves: `playlistID`, `likeCount`, `isLiked`, `isCustom`, `dateAdded`
+- Saves to localStorage via `saveCustomPlaylists()`
+- Re-renders all cards via `renderPlaylistCards()`
+- Closes form modal
+
+**What does it do - ADD MODE (when `editingPlaylistId` is null):**
+- Creates new playlist object with generated ID
+- Adds to `playlistsData` array
+- Same save/render/close flow as before
+
+##### `deletePlaylist(playlistID)`
+**What does this function take in?**
+- `playlistID` (number) - ID of playlist to delete
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Removes playlist from `playlistsData` array
+- Re-renders playlist cards
+
+**What does it do?**
+- Finds playlist by ID
+- Shows confirmation dialog: "Are you sure you want to delete [playlistTitle]? This action cannot be undone."
+- If user clicks Cancel, function exits without changes
+- If user clicks OK:
+  - Removes playlist from `playlistsData` array using `splice()`
+  - Saves custom playlists to localStorage via `saveCustomPlaylists()`
+  - Updates likes in localStorage via `saveLikesToStorage()`
+  - Re-renders all cards via `renderPlaylistCards()`
+  - Logs success message to console
+
+**Important Notes:**
+- Original (non-custom) playlists: Deleted from session only, return on page refresh
+- Custom playlists: Permanently deleted from localStorage
+- Confirmation prevents accidental deletions
+
+##### `addSongFieldToForm()`
+**What does this function take in?**
+- No parameters (or optionally song data for editing)
+
+**What does it return or produce?**
+- Returns nothing (void)
+- Adds a new song input group to the form
+
+**What does it do?**
+- Creates HTML elements for song input fields
+- Fields include: title, artist, album, cover URL, duration
+- Provides "Remove" button for each song
+- Appends to songs container in form
+
+#### UI Components
+
+**Add Playlist Button**
+- Location: Homepage navigation bar, right side (+ button)
+- Style: Prominent, contrasting color
+- Action: Opens add playlist form modal
+
+**3-Dot Menu on Cards**
+- Location: On each playlist card, next to the like count
+- Icon: Vertical 3-dot icon (⋮)
+- Style: Gray color, brightens on hover
+- Action: Opens dropdown menu with Edit and Delete options
+- **Dropdown Menu:**
+  - Dark semi-transparent background with blur
+  - Two menu items:
+    - ✏️ Edit - Opens edit form
+    - 🗑️ Delete - Prompts deletion confirmation
+  - Smooth slide-in animation
+  - Auto-closes when clicking outside or selecting an option
+  - Delete option turns red on hover
+
+**Playlist Form Modal**
+- Overlay: Dark semi-transparent background
+- Form: Centered, scrollable if needed
+- Fields:
+  - Playlist Name (text input)
+  - Creator (text input)
+  - Cover Image URL (text input)
+  - Songs section with "Add Song" button
+  - Each song has: title, artist, album, cover URL, duration
+- Buttons: Save/Update, Cancel
+
+#### Data Persistence Note
+- Changes are stored in memory (`playlistsData` array)
+- Data persists during current session
+- Refreshing page will reload original `data.json`
+- For true persistence, would need backend/localStorage (future enhancement)
+
+#### Validation Rules
+- Playlist name: Required, min 1 character
+- Creator: Required, min 1 character
+- Cover URL: Optional (use placeholder if empty)
+- At least 1 song required
+- Song title: Required
+- Song artist: Required
+- Duration: Required, format "M:SS" (e.g., "3:45")
+
+### AI-Powered Playlist Descriptions (Milestone 8)
+
+#### AI Feature Spec
+
+**Role:**
+The AI model should act as a music curator and playlist analyst who understands musical genres, themes, and vibes.
+
+**Task:**
+Generate a compelling 2-3 sentence description for a music playlist that captures its overall vibe, theme, and emotional tone based on the playlist name, creator, and the collection of songs included.
+
+**Inputs:**
+- `playlistTitle` (string) - The name of the playlist
+- `playlistCreator` (string) - The creator's name
+- `songs` (array) - Array of song objects, each containing:
+  - `songTitle` (string)
+  - `songArtist` (string)
+  - `songAlbum` (string)
+
+**Output Format:**
+- A 2-3 sentence paragraph
+- First sentence: Capture the overall mood/genre/theme
+- Second sentence: Highlight what makes this playlist unique or when it's best enjoyed
+- Third sentence (optional): Mention the vibe or emotional journey
+- Natural, conversational tone
+- No marketing jargon or promotional language
+- No bullet points or lists
+
+**Constraints:**
+- Do NOT list individual songs by name
+- Do NOT use generic phrases like "perfect for any occasion" or "something for everyone"
+- Do NOT mention specific song counts (e.g., "featuring 8 tracks")
+- Do NOT use overly promotional or salesy language
+- Do NOT make assumptions about the listener's preferences
+- KEEP it concise (2-3 sentences maximum, roughly 40-80 words)
+- FOCUS on the collective vibe, not individual tracks
+
+**Example Output:**
+"This playlist brings together smooth jazz and contemporary indie vibes, creating a perfect soundtrack for late-night introspection. The carefully curated selection flows from mellow acoustic moments to dreamy electronic textures. Ideal for unwinding after a long day or setting a calm, creative atmosphere."
+
+**Failure Behavior:**
+- If API call fails: Display a user-friendly error message: "Unable to generate description. Please try again."
+- If response is empty/invalid: Display fallback text: "Description unavailable at this time."
+- Show a "Retry" button if generation fails
+- The UI should remain functional; failure should not break the modal
+- Log errors to console for debugging but don't expose technical details to users
+
+#### Function Specs
+
+##### `getPlaylistDescription(playlist)`
+**What does this function take in?**
+- `playlist` (object) - A complete playlist object containing:
+  - `playlistTitle` (string)
+  - `playlistCreator` (string)
+  - `songs` (array of song objects)
+
+**What does it return?**
+- Returns a Promise that resolves to:
+  - `string` - The AI-generated description (on success)
+  - `null` - If the API call fails or returns invalid data
+
+**What API does it call?**
+- Anthropic Claude API (or other AI API like OpenAI)
+- Endpoint: Configured in environment/secrets file
+- Model: Claude 3.5 Sonnet (or specified model)
+
+**Prompt Structure:**
+```
+You are a music curator and playlist analyst. Generate a 2-3 sentence description for this playlist:
+
+Playlist: {playlistTitle}
+Creator: {playlistCreator}
+
+Songs:
+- {songTitle} by {songArtist} ({songAlbum})
+- {songTitle} by {songArtist} ({songAlbum})
+...
+
+Requirements:
+- Capture the overall mood, genre, and theme
+- 2-3 sentences, natural and conversational tone
+- Do NOT list individual songs
+- Do NOT use generic marketing language
+- Focus on the vibe and when/how to enjoy this playlist
+```
+
+**What happens on error?**
+1. **Network Error:**
+   - Catch the error in try-catch block
+   - Log error details to console
+   - Return `null` to calling function
+   - UI displays: "Unable to generate description. Please try again."
+
+2. **API Error (4xx/5xx response):**
+   - Check response status
+   - Log error message from API
+   - Return `null`
+   - UI displays error message with retry option
+
+3. **Invalid/Empty Response:**
+   - Validate response structure
+   - If description is empty or malformed, return `null`
+   - UI displays fallback message
+
+4. **Timeout:**
+   - Set reasonable timeout (e.g., 10 seconds)
+   - If exceeded, cancel request and return `null`
+   - UI shows timeout message
+
+**Implementation Notes:**
+- Use async/await for clean asynchronous code
+- Store API key securely (NOT in git repository)
+- Add loading state while API call is in progress
+- Consider caching descriptions in memory/localStorage to avoid redundant API calls
+- Rate limit button clicks to prevent API spam
+
+##### UI Integration Spec
+
+**"Get Description" Button:**
+- Location: Inside the playlist modal, below the playlist creator name
+- Initial State: Blue/primary color button, text "Get Description"
+- Loading State: Button disabled, text "Generating..." with spinner/loading animation
+- Success State: Button hidden or changes to "Regenerate Description"
+- Error State: Button shows "Retry" with error styling
+
+**Description Display Area:**
+- Location: Below the "Get Description" button, above the song list
+- Initial State: Hidden/not present
+- Loading State: Show skeleton loader or animated placeholder
+- Success State: Display description text with subtle background styling
+- Error State: Show error message in red/warning color with retry option
+- Style: Italic text, slightly smaller font, light background box with padding
+
+**User Flow:**
+1. User opens playlist modal
+2. User sees "Get Description" button
+3. User clicks button
+4. Button shows "Generating..." (disabled)
+5. API call made in background
+6. On success: Description appears, button becomes "Regenerate"
+7. On error: Error message appears, button becomes "Retry"
 
 ### Decisions Log
-[One entry per milestone where you make spec-informed decisions]
+
+#### Milestone 7: Featured Page Implementation
+
+**Date:** June 9, 2026
+
+**Context:**
+Creating a dedicated Featured page that displays a randomly selected playlist with an interactive song carousel.
+
+**Key Decisions:**
+
+1. **Random Selection Algorithm**
+   - **Decision:** Use `Math.random()` with array indexing to select playlist
+   - **Reasoning:** Simple, effective for small dataset (8 playlists), runs client-side
+   - **Implementation:** `const randomIndex = Math.floor(Math.random() * playlistsData.length)`
+   - **Trade-off:** True randomness means same playlist can appear consecutively (acceptable per requirements)
+
+2. **Carousel Implementation**
+   - **Decision:** Infinite scroll carousel with tripled song array
+   - **Reasoning:** 
+     - Duplicate songs 3x creates seamless infinite scroll illusion
+     - Middle section loaded first allows scrolling both directions
+     - Repositioning on scroll edges maintains infinite effect
+   - **Alternative Considered:** Finite carousel with disabled end buttons (rejected - less engaging UX)
+
+3. **Page Navigation Strategy**
+   - **Decision:** Standard HTML `<a>` tags with native browser navigation
+   - **Reasoning:**
+     - Simplest implementation (no router library needed)
+     - Leverages browser history naturally
+     - Consistent header on both pages
+   - **Implementation:** Same navigation bar rendered on index.html and featured.html
+
+4. **Layout Design**
+   - **Decision:** Split layout - playlist info (left) + large cover image (right) + carousel (bottom)
+   - **Reasoning:**
+     - Visual hierarchy emphasizes featured playlist
+     - Large cover image creates "hero" feel appropriate for featured content
+     - Carousel below allows horizontal scrolling without competing for vertical space
+
+5. **Featured Card Highlighting**
+   - **Decision:** Center-aligned card gets visual emphasis (scale + shadow)
+   - **Reasoning:**
+     - Provides visual focus as user scrolls
+     - Dynamic highlighting based on viewport position
+     - Updates smoothly during scroll for fluid experience
+
+**Testing Results:**
+- ✅ Random playlist loads on page load
+- ✅ Different playlist selected on refresh
+- ✅ Navigation works without browser back/forward
+- ✅ Carousel scrolls infinitely in both directions
+- ✅ Featured card highlights based on position
+
+---
+
+#### Milestone 8: AI-Powered Playlist Descriptions
+
+**Date:** June 9, 2026
+
+**Context:**
+Implementing AI-generated playlist descriptions that appear in the modal when users click a "Get Description" button.
+
+**Key Decisions:**
+
+1. **API Choice: OpenRouter with Free Gemma 4 Model**
+   - **Decision:** Use OpenRouter API with `google/gemma-4-31b-it:free` model
+   - **Reasoning:** 
+     - OpenRouter provides a unified API for multiple AI models
+     - Using a free model as specified in the lab instructions (no cost, suitable for learning)
+     - Initially tried `meta-llama/llama-3.3-70b-instruct:free` but encountered rate limiting
+     - Gemma 4 31B is a powerful open-source model from Google capable of generating quality 2-3 sentence descriptions
+     - Free tier models prevent unexpected API charges during development
+     - Model successfully generates sophisticated, contextually relevant playlist descriptions
+   - **Alternative Free Models:** `google/gemma-4-26b-a4b-it:free`, `poolside/laguna-m.1:free`, `moonshotai/kimi-k2.6:free`
+   - **Production Note:** For a real app, this would use a backend proxy to hide the API key and could use paid models for better quality
+
+2. **Prompt Structure**
+   - **Decision:** Include playlist title, creator, and full song list (title, artist, album) in prompt
+   - **Reasoning:**
+     - More context = better, more accurate descriptions
+     - Song titles and artists help AI understand genre/vibe
+     - Explicitly instructing "Do NOT list individual songs" prevents the AI from just listing songs back
+   - **Constraint Added:** "Do NOT use generic marketing language" to ensure authentic, useful descriptions
+
+3. **Caching Strategy**
+   - **Decision:** Cache descriptions in memory by playlist ID
+   - **Reasoning:**
+     - Avoids redundant API calls (saves money and improves UX)
+     - Instant display when reopening the same playlist
+     - Memory cache (not localStorage) means fresh descriptions on page reload
+   - **Trade-off:** Cache cleared on page refresh, but acceptable since descriptions should feel fresh
+
+4. **Button States and UX**
+   - **Decision:** Three button states: "Get Description" → "Generating..." → "Regenerate"
+   - **Reasoning:**
+     - Clear loading state with spinner animation provides feedback during API call
+     - "Regenerate" button allows users to get alternative descriptions without seeming broken
+     - Clicking "Regenerate" clears cache and generates a truly new description
+   - **Alternative Considered:** Single "Generate" button, but "Regenerate" better communicates that new content will be created
+
+5. **Error Handling**
+   - **Decision:** User-friendly error message + "Retry" button, detailed logs in console
+   - **Reasoning:**
+     - Users don't need to see technical details (HTTP codes, API errors)
+     - "Unable to generate description. Please try again." is clear and actionable
+     - Console logs help with debugging during development
+     - Red styling on error state makes it visually distinct
+   - **Fallback:** Modal remains functional even if API fails (doesn't break the UI)
+
+6. **Loading Animation**
+   - **Decision:** Spinning icon using CSS animation with `::before` pseudo-element
+   - **Reasoning:**
+     - Pure CSS solution (no additional image/icon library needed)
+     - Lightweight and performant
+     - Matches dark theme aesthetic
+   - **Alternative Considered:** Text-only "Generating...", but spinner provides better visual feedback
+
+7. **Description Display Style**
+   - **Decision:** Italic text in a subtle background box, positioned below button in modal
+   - **Reasoning:**
+     - Italic styling communicates that it's AI-generated/editorial content (not user-provided data)
+     - Subtle background distinguishes description from other modal content
+     - Positioned in modal-info section keeps it visually grouped with playlist metadata
+   - **Trade-off:** Takes up more vertical space in modal, but acceptable given value of the feature
+
+8. **Security: API Key Management**
+   - **Decision:** Store API key in `secrets.js` file, add to `.gitignore`
+   - **Reasoning:**
+     - Prevents accidental commit of API keys to git repository
+     - Simple solution for client-side app (no backend)
+     - Created `.gitignore` to protect `secrets.js`
+   - **Limitation:** Client-side storage means key is visible in browser (acceptable for educational project)
+   - **Production Note:** In a real app, this would require a backend proxy to hide the API key
+
+**Technical Implementation Notes:**
+- API call uses `fetch` with async/await for clean error handling
+- Timeout not implemented (OpenRouter has default timeout)
+- Response validated for structure before displaying
+- Console logs added for debugging API issues
+
+**Testing Results:**
+- ✅ Button appears in modal
+- ✅ Loading state displays during API call
+- ✅ Description appears on success
+- ✅ Error message displays on failure
+- ✅ "Regenerate" clears cache and generates new description
+- ✅ Cached descriptions show immediately when reopening playlist
+
+**Future Enhancements:**
+- Add localStorage caching to persist descriptions across page reloads
+- Implement rate limiting to prevent API spam from rapid button clicks
+- Add timeout handling for slow API responses
+- Consider backend proxy to hide API key in production

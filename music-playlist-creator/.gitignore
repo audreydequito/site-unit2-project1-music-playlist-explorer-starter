@@ -1,0 +1,14 @@
+# API Keys and Secrets
+secrets.js
+
+# Mac system files
+.DS_Store
+
+# Node modules (if you add any later)
+node_modules/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

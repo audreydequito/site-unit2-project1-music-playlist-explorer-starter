@@ -1,0 +1,588 @@
+{
+  "playlists": [
+    {
+      "playlistID": 1,
+      "playlistTitle": "Chill Vibes",
+      "playlistArtURL": "https://images.pexels.com/photos/3568518/pexels-photo-3568518.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Alex Chen",
+      "likeCount": 1247,
+      "songs": [
+        {
+          "songID": 101,
+          "songTitle": "Slow Dancing in the Dark",
+          "songArtist": "Joji",
+          "songAlbum": "BALLADS 1",
+          "songArtURL": "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:29"
+        },
+        {
+          "songID": 102,
+          "songTitle": "Love Lee",
+          "songArtist": "AKMU",
+          "songAlbum": "LOVE LEE",
+          "songArtURL": "https://images.pexels.com/photos/1606403/pexels-photo-1606403.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:24"
+        },
+        {
+          "songID": 103,
+          "songTitle": "Sanctuary",
+          "songArtist": "Joji",
+          "songAlbum": "Nectar",
+          "songArtURL": "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:00"
+        },
+        {
+          "songID": 104,
+          "songTitle": "Stay",
+          "songArtist": "BLACKPINK",
+          "songAlbum": "SQUARE TWO",
+          "songArtURL": "https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:27"
+        },
+        {
+          "songID": 105,
+          "songTitle": "Cigarettes After Sex",
+          "songArtist": "Apocalypse",
+          "songAlbum": "Cigarettes After Sex",
+          "songArtURL": "https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:11"
+        },
+        {
+          "songID": 106,
+          "songTitle": "Night Dancer",
+          "songArtist": "imase",
+          "songAlbum": "Night Dancer",
+          "songArtURL": "https://images.pexels.com/photos/3721941/pexels-photo-3721941.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:36"
+        },
+        {
+          "songID": 107,
+          "songTitle": "Die For You",
+          "songArtist": "The Weeknd",
+          "songAlbum": "Starboy",
+          "songArtURL": "https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:20"
+        },
+        {
+          "songID": 108,
+          "songTitle": "Instagram",
+          "songArtist": "DEAN",
+          "songAlbum": "130 mood : TRBL",
+          "songArtURL": "https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:20"
+        }
+      ]
+    },
+    {
+      "playlistID": 2,
+      "playlistTitle": "Workout Hits",
+      "playlistArtURL": "https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Marcus Johnson",
+      "likeCount": 2891,
+      "songs": [
+        {
+          "songID": 201,
+          "songTitle": "LALISA",
+          "songArtist": "LISA",
+          "songAlbum": "LALISA",
+          "songArtURL": "https://images.pexels.com/photos/3771823/pexels-photo-3771823.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:21"
+        },
+        {
+          "songID": 202,
+          "songTitle": "Super Shy",
+          "songArtist": "NewJeans",
+          "songAlbum": "Get Up",
+          "songArtURL": "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:34"
+        },
+        {
+          "songID": 203,
+          "songTitle": "HOT",
+          "songArtist": "SEVENTEEN",
+          "songAlbum": "Face the Sun",
+          "songArtURL": "https://images.pexels.com/photos/1666816/pexels-photo-1666816.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:18"
+        },
+        {
+          "songID": 204,
+          "songTitle": "Money",
+          "songArtist": "LISA",
+          "songAlbum": "LALISA",
+          "songArtURL": "https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:48"
+        },
+        {
+          "songID": 205,
+          "songTitle": "Dynamite",
+          "songArtist": "BTS",
+          "songAlbum": "BE",
+          "songArtURL": "https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:19"
+        },
+        {
+          "songID": 206,
+          "songTitle": "Gods",
+          "songArtist": "NewJeans",
+          "songAlbum": "Get Up",
+          "songArtURL": "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:55"
+        },
+        {
+          "songID": 207,
+          "songTitle": "Shut Down",
+          "songArtist": "BLACKPINK",
+          "songAlbum": "BORN PINK",
+          "songArtURL": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:55"
+        },
+        {
+          "songID": 208,
+          "songTitle": "Bite Me",
+          "songArtist": "ENHYPEN",
+          "songAlbum": "DARK BLOOD",
+          "songArtURL": "https://images.pexels.com/photos/3721941/pexels-photo-3721941.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:57"
+        }
+      ]
+    },
+    {
+      "playlistID": 3,
+      "playlistTitle": "Late Night Jazz",
+      "playlistArtURL": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Sofia Martinez",
+      "likeCount": 856,
+      "songs": [
+        {
+          "songID": 301,
+          "songTitle": "Earned It",
+          "songArtist": "The Weeknd",
+          "songAlbum": "Beauty Behind the Madness",
+          "songArtURL": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:37"
+        },
+        {
+          "songID": 302,
+          "songTitle": "Electric",
+          "songArtist": "Alina Baraz",
+          "songAlbum": "It Was Divine",
+          "songArtURL": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:35"
+        },
+        {
+          "songID": 303,
+          "songTitle": "Moonchild",
+          "songArtist": "RM",
+          "songAlbum": "mono.",
+          "songArtURL": "https://images.pexels.com/photos/1906658/pexels-photo-1906658.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:30"
+        },
+        {
+          "songID": 304,
+          "songTitle": "Snooze",
+          "songArtist": "SZA",
+          "songAlbum": "SOS",
+          "songArtURL": "https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:22"
+        },
+        {
+          "songID": 305,
+          "songTitle": "Tokyo",
+          "songArtist": "RM",
+          "songAlbum": "mono.",
+          "songArtURL": "https://images.pexels.com/photos/2330137/pexels-photo-2330137.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:56"
+        },
+        {
+          "songID": 306,
+          "songTitle": "Best Part",
+          "songArtist": "Daniel Caesar ft. H.E.R.",
+          "songAlbum": "Freudian",
+          "songArtURL": "https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:30"
+        },
+        {
+          "songID": 307,
+          "songTitle": "Wasted Nights",
+          "songArtist": "ONE OK ROCK",
+          "songAlbum": "Eye of the Storm",
+          "songArtURL": "https://images.pexels.com/photos/1699030/pexels-photo-1699030.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:51"
+        },
+        {
+          "songID": 308,
+          "songTitle": "Normal People",
+          "songArtist": "Joji",
+          "songAlbum": "Nectar",
+          "songArtURL": "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:45"
+        }
+      ]
+    },
+    {
+      "playlistID": 4,
+      "playlistTitle": "Road Trip Mix",
+      "playlistArtURL": "https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Jordan Lee",
+      "likeCount": 3421,
+      "songs": [
+        {
+          "songID": 401,
+          "songTitle": "Good Days",
+          "songArtist": "SZA",
+          "songAlbum": "SOS",
+          "songArtURL": "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:39"
+        },
+        {
+          "songID": 402,
+          "songTitle": "Ditto",
+          "songArtist": "NewJeans",
+          "songAlbum": "OMG",
+          "songArtURL": "https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:05"
+        },
+        {
+          "songID": 403,
+          "songTitle": "Blinding Lights",
+          "songArtist": "The Weeknd",
+          "songAlbum": "After Hours",
+          "songArtURL": "https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:22"
+        },
+        {
+          "songID": 404,
+          "songTitle": "Hype Boy",
+          "songArtist": "NewJeans",
+          "songAlbum": "NewJeans 1st EP 'New Jeans'",
+          "songArtURL": "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:59"
+        },
+        {
+          "songID": 405,
+          "songTitle": "Save Your Tears",
+          "songArtist": "The Weeknd",
+          "songAlbum": "After Hours",
+          "songArtURL": "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:35"
+        },
+        {
+          "songID": 406,
+          "songTitle": "Pink Venom",
+          "songArtist": "BLACKPINK",
+          "songAlbum": "BORN PINK",
+          "songArtURL": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:07"
+        },
+        {
+          "songID": 407,
+          "songTitle": "As It Was",
+          "songArtist": "Harry Styles",
+          "songAlbum": "Harry's House",
+          "songArtURL": "https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:47"
+        },
+        {
+          "songID": 408,
+          "songTitle": "Attention",
+          "songArtist": "NewJeans",
+          "songAlbum": "NewJeans 1st EP 'New Jeans'",
+          "songArtURL": "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:01"
+        }
+      ]
+    },
+    {
+      "playlistID": 5,
+      "playlistTitle": "Study Focus",
+      "playlistArtURL": "https://images.pexels.com/photos/8500317/pexels-photo-8500317.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Emma Wilson",
+      "likeCount": 1923,
+      "songs": [
+        {
+          "songID": 501,
+          "songTitle": "Sparkle",
+          "songArtist": "RADWIMPS",
+          "songAlbum": "Your Name",
+          "songArtURL": "https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "6:50"
+        },
+        {
+          "songID": 502,
+          "songTitle": "Kick Back",
+          "songArtist": "Kenshi Yonezu",
+          "songAlbum": "Kick Back",
+          "songArtURL": "https://images.pexels.com/photos/1438404/pexels-photo-1438404.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:18"
+        },
+        {
+          "songID": 503,
+          "songTitle": "Idol",
+          "songArtist": "YOASOBI",
+          "songAlbum": "THE BOOK 3",
+          "songArtURL": "https://images.pexels.com/photos/2330137/pexels-photo-2330137.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:20"
+        },
+        {
+          "songID": 504,
+          "songTitle": "Lemon",
+          "songArtist": "Kenshi Yonezu",
+          "songAlbum": "BOOTLEG",
+          "songArtURL": "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:15"
+        },
+        {
+          "songID": 505,
+          "songTitle": "Racing Into The Night",
+          "songArtist": "YOASOBI",
+          "songAlbum": "THE BOOK",
+          "songArtURL": "https://images.pexels.com/photos/2330137/pexels-photo-2330137.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:17"
+        },
+        {
+          "songID": 506,
+          "songTitle": "Pretender",
+          "songArtist": "Official HIGE DANdism",
+          "songAlbum": "Pretender",
+          "songArtURL": "https://images.pexels.com/photos/1699030/pexels-photo-1699030.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "5:26"
+        },
+        {
+          "songID": 507,
+          "songTitle": "Blessing",
+          "songArtist": "YOASOBI",
+          "songAlbum": "THE BOOK 2",
+          "songArtURL": "https://images.pexels.com/photos/1906658/pexels-photo-1906658.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:43"
+        },
+        {
+          "songID": 508,
+          "songTitle": "Souvenir",
+          "songArtist": "BUMP OF CHICKEN",
+          "songAlbum": "Souvenir",
+          "songArtURL": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "5:02"
+        }
+      ]
+    },
+    {
+      "playlistID": 6,
+      "playlistTitle": "Party Starters",
+      "playlistArtURL": "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "DJ Nova",
+      "likeCount": 4562,
+      "songs": [
+        {
+          "songID": 601,
+          "songTitle": "APT.",
+          "songArtist": "ROSÉ & Bruno Mars",
+          "songAlbum": "APT.",
+          "songArtURL": "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:49"
+        },
+        {
+          "songID": 602,
+          "songTitle": "Cupid",
+          "songArtist": "FIFTY FIFTY",
+          "songAlbum": "The Beginning: Cupid",
+          "songArtURL": "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:54"
+        },
+        {
+          "songID": 603,
+          "songTitle": "How You Like That",
+          "songArtist": "BLACKPINK",
+          "songAlbum": "THE ALBUM",
+          "songArtURL": "https://images.pexels.com/photos/3771823/pexels-photo-3771823.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:02"
+        },
+        {
+          "songID": 604,
+          "songTitle": "Seven",
+          "songArtist": "Jung Kook ft. Latto",
+          "songAlbum": "GOLDEN",
+          "songArtURL": "https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:04"
+        },
+        {
+          "songID": 605,
+          "songTitle": "ETA",
+          "songArtist": "NewJeans",
+          "songAlbum": "Get Up",
+          "songArtURL": "https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:32"
+        },
+        {
+          "songID": 606,
+          "songTitle": "Standing Next to You",
+          "songArtist": "Jung Kook",
+          "songAlbum": "GOLDEN",
+          "songArtURL": "https://images.pexels.com/photos/1666816/pexels-photo-1666816.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:56"
+        },
+        {
+          "songID": 607,
+          "songTitle": "Kill This Love",
+          "songArtist": "BLACKPINK",
+          "songAlbum": "KILL THIS LOVE",
+          "songArtURL": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:14"
+        },
+        {
+          "songID": 608,
+          "songTitle": "OMG",
+          "songArtist": "NewJeans",
+          "songAlbum": "OMG",
+          "songArtURL": "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:36"
+        }
+      ]
+    },
+    {
+      "playlistID": 7,
+      "playlistTitle": "Acoustic Coffee",
+      "playlistArtURL": "https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Olivia Brown",
+      "likeCount": 712,
+      "songs": [
+        {
+          "songID": 701,
+          "songTitle": "Spring Day",
+          "songArtist": "BTS",
+          "songAlbum": "You Never Walk Alone",
+          "songArtURL": "https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:35"
+        },
+        {
+          "songID": 702,
+          "songTitle": "Love Wins All",
+          "songArtist": "IU",
+          "songAlbum": "The Winning",
+          "songArtURL": "https://images.pexels.com/photos/1267697/pexels-photo-1267697.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:32"
+        },
+        {
+          "songID": 703,
+          "songTitle": "strawberries & cigarettes",
+          "songArtist": "Troye Sivan",
+          "songAlbum": "Bloom",
+          "songArtURL": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:31"
+        },
+        {
+          "songID": 704,
+          "songTitle": "eight",
+          "songArtist": "IU ft. SUGA",
+          "songAlbum": "eight",
+          "songArtURL": "https://images.pexels.com/photos/1906658/pexels-photo-1906658.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:47"
+        },
+        {
+          "songID": 705,
+          "songTitle": "Youth",
+          "songArtist": "Troye Sivan",
+          "songAlbum": "Blue Neighbourhood",
+          "songArtURL": "https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:21"
+        },
+        {
+          "songID": 706,
+          "songTitle": "Palette",
+          "songArtist": "IU ft. G-DRAGON",
+          "songAlbum": "Palette",
+          "songArtURL": "https://images.pexels.com/photos/1820567/pexels-photo-1820567.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:35"
+        },
+        {
+          "songID": 707,
+          "songTitle": "My My My!",
+          "songArtist": "Troye Sivan",
+          "songAlbum": "Bloom",
+          "songArtURL": "https://images.pexels.com/photos/1699030/pexels-photo-1699030.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:33"
+        },
+        {
+          "songID": 708,
+          "songTitle": "Through the Night",
+          "songArtist": "IU",
+          "songAlbum": "A Flower Bookmark 2",
+          "songArtURL": "https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:43"
+        }
+      ]
+    },
+    {
+      "playlistID": 8,
+      "playlistTitle": "Pop Essentials",
+      "playlistArtURL": "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "playlistCreator": "Ryan Davis",
+      "likeCount": 5284,
+      "songs": [
+        {
+          "songID": 801,
+          "songTitle": "Anti-Hero",
+          "songArtist": "Taylor Swift",
+          "songAlbum": "Midnights",
+          "songArtURL": "https://images.pexels.com/photos/1438404/pexels-photo-1438404.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:20"
+        },
+        {
+          "songID": 802,
+          "songTitle": "Flowers",
+          "songArtist": "Miley Cyrus",
+          "songAlbum": "Endless Summer Vacation",
+          "songArtURL": "https://images.pexels.com/photos/1122639/pexels-photo-1122639.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:20"
+        },
+        {
+          "songID": 803,
+          "songTitle": "Good 4 U",
+          "songArtist": "Olivia Rodrigo",
+          "songAlbum": "SOUR",
+          "songArtURL": "https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:58"
+        },
+        {
+          "songID": 804,
+          "songTitle": "Cruel Summer",
+          "songArtist": "Taylor Swift",
+          "songAlbum": "Lover",
+          "songArtURL": "https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "2:58"
+        },
+        {
+          "songID": 805,
+          "songTitle": "drivers license",
+          "songArtist": "Olivia Rodrigo",
+          "songAlbum": "SOUR",
+          "songArtURL": "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "4:02"
+        },
+        {
+          "songID": 806,
+          "songTitle": "Shake It Off",
+          "songArtist": "Taylor Swift",
+          "songAlbum": "1989",
+          "songArtURL": "https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:39"
+        },
+        {
+          "songID": 807,
+          "songTitle": "vampire",
+          "songArtist": "Olivia Rodrigo",
+          "songAlbum": "GUTS",
+          "songArtURL": "https://images.pexels.com/photos/3721941/pexels-photo-3721941.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:39"
+        },
+        {
+          "songID": 808,
+          "songTitle": "Lover",
+          "songArtist": "Taylor Swift",
+          "songAlbum": "Lover",
+          "songArtURL": "https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "songDuration": "3:41"
+        }
+      ]
+    }
+  ]
+}

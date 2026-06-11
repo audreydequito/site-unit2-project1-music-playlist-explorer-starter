@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wave - Featured</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="featured.css">
+</head>
+<body>
+    <div class="page-transition-overlay"></div>
+    <div class="dynamic-background"></div>
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 4C22 4 26 6 28 12C30 18 28 24 24 28C20 32 14 30 12 26C10 22 11 18 13 16C15 14 17 15 18 17C19 19 18 21 16 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 10C18 10 20 11 21 14C22 17 20 19 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h1>wave</h1>
+        </div>
+        <nav class="page-navigation">
+            <a href="featured.html" class="nav-link active">Featured</a>
+            <a href="index.html" class="nav-link">All</a>
+            <button id="add-playlist-btn" class="nav-link add-btn">+</button>
+            <button id="search-icon-btn" class="nav-link search-btn" title="Search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </nav>
+        <div class="header-search-container" id="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search playlists..."
+                class="header-search-input"
+            >
+            <button class="search-close-btn" id="search-close-btn">✕</button>
+        </div>
+    </header>
+
+    <div class="featured-welcome">
+        <h2 class="featured-welcome-title">today's pick</h2>
+        <p class="featured-welcome-subtitle">discover something new</p>
+    </div>
+
+    <main class="featured-main">
+        <div class="featured-content">
+            <div class="playlist-cover-container">
+                <img src="assets/placeholder-image.jpg" alt="Playlist Cover" class="featured-cover">
+            </div>
+            <div class="playlist-details">
+                <h2 class="featured-playlist-title">Playlist Name</h2>
+                <p class="featured-creator">Creator</p>
+            </div>
+        </div>
+
+        <div class="carousel-section">
+            <button class="carousel-arrow carousel-arrow-left" aria-label="Previous songs">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="song-carousel-container">
+                <div class="song-carousel">
+                    <!-- Song cards will be dynamically inserted here -->
+                </div>
+            </div>
+            <button class="carousel-arrow carousel-arrow-right" aria-label="Next songs">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Progress Indicators -->
+        <div class="carousel-progress">
+            <!-- Dots will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Add Playlist Form Modal -->
+    <div class="modal-overlay" id="form-modal">
+        <div class="modal-content form-modal-content">
+            <h2 id="form-modal-title">Add New Playlist</h2>
+            <form id="playlist-form">
+                <div class="form-group">
+                    <label for="playlist-title-input">Playlist Title *</label>
+                    <input type="text" id="playlist-title-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlist-creator-input">Creator Name *</label>
+                    <input type="text" id="playlist-creator-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="playlist-art-url-input">Cover Image URL *</label>
+                    <input type="url" id="playlist-art-url-input" required placeholder="https://example.com/image.jpg">
+                </div>
+
+                <h3>Songs</h3>
+                <div id="songs-container">
+                    <!-- Song inputs will be added here dynamically -->
+                </div>
+
+                <button type="button" id="add-song-btn" class="secondary-btn">+ Add Song</button>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">Save Playlist</button>
+                    <button type="button" id="cancel-form-btn" class="secondary-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Wave</p>
+    </footer>
+
+    <script src="secrets.js"></script>
+    <script src="featured.js"></script>
+</body>
+</html>
