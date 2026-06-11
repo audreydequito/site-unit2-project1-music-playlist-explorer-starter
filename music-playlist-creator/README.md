@@ -52,14 +52,14 @@ Wave is a modern music playlist explorer featuring diverse playlists across K-po
     - [x] If previously liked:
       - [x] The like count on the playlist tile should decrease by 1.
       - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
       - [x] a playlist with a like count of 0
       - [x] a playlist with a non-zero like count
 
 - [x] **Shuffle Songs**
   - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
   - [x] When the shuffle button is clicked, the playlist's songs should display in a different order.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
   
 - [x] **Featured Page**
   - [x] Application includes a dedicated page that randomly selects and displays a playlist, showing the playlist’s:
@@ -72,7 +72,7 @@ Wave is a modern music playlist explorer featuring diverse playlists across K-po
   - [x] When the page is refreshed or reloaded, a new random playlist is displayed
     - For example, navigating to the all playlists page and then back to the featured playlist page should result in a new random playlist being displayed
     - Note that because your algorithm will not be truly random, it is possible that the same playlist will feature twice in a row. 
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself refreshing the featured page more than once. 
   - [x] Application includes a navigation bar or some other mechanism such that users can navigate to the page with all playlists from the featured page and vice versa without using the browser's back and forward buttons. 
 
 - [x] **Planning Documentation**
@@ -87,7 +87,7 @@ Wave is a modern music playlist explorer featuring diverse playlists across K-po
   - [x] The playlist detail modal includes a "Get Description" button.
   - [x] Clicking the button calls an AI API and displays a generated description within the modal.
   - [x] `planning.md` includes an **AI Feature Spec** documenting role, task, inputs, output format, constraints, and failure behavior.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, open your browser's DevTools Network tab, click the "Get Description" button, and show the outbound request going directly to an AI API URL (e.g., `openrouter.ai`).
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, open your browser's DevTools Network tab, click the "Get Description" button, and show the outbound request going directly to an AI API URL (e.g., `openrouter.ai`).
 
 #### STRETCH FEATURES
 
@@ -101,7 +101,7 @@ Wave is a modern music playlist explorer featuring diverse playlists across K-po
       - [x] Title
       - [x] Artist
   - [x] The resulting playlist should display in the grid view.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
 
 - [x] **Edit Existing Playlists**
   - [x] Enable users to modify the details of existing playlists.
@@ -139,22 +139,22 @@ Wave is a modern music playlist explorer featuring diverse playlists across K-po
       - [x] If users can delete a playlist, deleted playlists should no longer be included in search results.
       - **Note:** You will not be graded on the implementation of this optional subfeature to keep your grade of this stretch feature independent of your implementation of other stretch features. However, we highly suggest including this in your implementation to model realistic behavior of real applications. 
 
-- [x] **Sorting Options**
+- [] **Sorting Options**
   - [x] Implement a drop-down or button options that allow users to sort the playlist by:
     - [x] Name (A-Z alphabetically)
     - [x] Number of likes (descending order)
-    - [x] Date added (most recent to oldest, chronologically)
+    - [ ] Date added (most recent to oldest, chronologically)
   - [x] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
 
 ### Walkthrough Video
 
-**Walkthrough video:** [Music Playlist Explorer Walkthrough](ADD_LOOM_LINK_HERE)
+**Walkthrough video:** [Music Playlist Explorer Walkthrough](https://www.loom.com/share/7228d76a38e8454a86ba15d92f9e34aa)
 
 ### Screenshots
 
 <img src="sample_main_layout.png" width="600" alt="Main playlist grid view">
 <img src="sample_modal.png" width="600" alt="Playlist detail modal">
-<img src="sample_featured_page.png" width="600" alt="Featured page carousel">
+<img src="sample_featured_page.png" width="600" alt="Featured page carousel"> 
 <img src="sample_playlist.png" width="600" alt="Playlist card">
 <img src="sample_container.png" width="600" alt="Add playlist form">
 
